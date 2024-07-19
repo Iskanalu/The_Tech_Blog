@@ -1072,12 +1072,13 @@ a:hover {
 }
 
 .btn.btn-link {
-  background-color: #1b89bc;
-  color: #ffffff;
+  background-color: transparent;
+  color: #1b89bc;
 }
 
 .btn.btn-link:hover {
-  background-color: #31a9e1;
+  background-color: transparent;
+  text-decoration: underline;
 }
 
 .card {

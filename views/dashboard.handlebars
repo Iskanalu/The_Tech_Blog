@@ -1,12 +1,8 @@
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{title}}!</h2>
-  </div>
-</div>
+<button type="button" class="new-post-button">New Post</button>
 
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Create a New Post:</h3>
+    <h3>Create New Post</h3>
 
     <form class="form new-post-form">
       <div class="form-group">
@@ -33,12 +29,39 @@
         <h4><a href="/post/{{post.id}}">{{post.title}}</a></h4>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
+        <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="{{post.id}}">DELETE</button>
       </div>
     </div>
     {{/each}}
   </div>
   {{/if}}
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="exampleModalLabel">Edit Post</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="form signup-form">
+          <div class="form-group">
+            <label for="name-signup">Title</label>
+            <input class="form-input" type="text" id="title" />
+          </div>
+          <div class="form-group">
+            <label for="content">content</label>
+            <input class="form-input" type="text" id="content" />
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary w-100" type="update-post">Update Post</button>
+            <button class="btn btn-primary w-100" type="delete-post">Delete</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script src="./js/dashboard.js"></script>

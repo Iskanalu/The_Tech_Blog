@@ -1,14 +1,41 @@
 <div class="text-center">
-  <h2>{{name}}</h2>
+  <h2>{{title}}</h2>
   <p>{{{get_emoji}}}</p>
-  <p>{{description}}</p>
+  <p>{{content}}</p>
   <p>Created by {{user.name}} on {{format_date date_created}}</p>
   <p>
-    <span for="img" aria-label="money">💲</span>
+    {{!-- <span for="img" aria-label="money">💲</span>
     <span class="dollar-amount">{{format_amount needed_funding}}</span>
     needed
   </p>
   <p>
     <button class="btn btn-primary">Fund this Project!</button>
-  </p>
+  </p> --}}
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="exampleModalLabel">Edit Post</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="form signup-form">
+          <div class="form-group">
+            <label for="name-signup">Title</label>
+            <input class="form-input" type="text" id="title" />
+          </div>
+          <div class="form-group">
+            <label for="content">content</label>
+            <input class="form-input" type="text" id="content" />
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary w-100" type="update-post">Update Post</button>
+            <button class="btn btn-primary w-100" type="delete-post">Delete</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
