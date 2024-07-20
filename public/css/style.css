@@ -1,17 +1,31 @@
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
-  background: black;
+  background: rgb(0, 0, 0);
 }
 header a {
   color: #d0e1d0;
 }
 
 .background-body {
-  background-color: #d0e1d0;
+  background-color: lightpink;
+}
+.posted-by {
+  font-size: x-small;
+}
+
+.modal-header {
+  background-color: rgb(0, 0, 0);
+  color: #ccc;
+
+}
+
+.modal-body {
+  background-color: lightpink;
 }
 
 .new-post-button {
   background-color: black;
+  font-size: xx-large;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -22,6 +36,21 @@ header a {
   margin: 2px 1px;
   cursor: pointer;
 }
+.btn-link {
+  font-size:30px;
+}
+.btn.btn-primary {
+  background-color: #2d3e50;
+  color: #d9e9e8;
+  margin: inherit;
+}
+
+.title{
+font-size: large;
+font-family: TrebuchetMS, sans-serif;
+font-weight: bold;
+}
+
 .no-button {
   background: none;
   border: none;
