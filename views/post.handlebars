@@ -8,7 +8,9 @@
   </div>
 </div>
 
+{{#if logged_in}}
 <button class="btn btn-primary post-comment" data-bs-toggle="modal" data-bs-target="#commentModal">Add a Comment</button>
+{{/if}}
 
 {{#each comments as |comment|}}
   <div class="header-post">

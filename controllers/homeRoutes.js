@@ -45,8 +45,7 @@ router.get('/post/:id', async (req, res) => {
 
     const post = postData.get({ plain: true });
     const comments = commmentData.map( c => c.get({ plain: true }));
-    console.log('comments  >', comments);
-    console.log('post data >', post);
+
     res.render('post', {
       ...post,
       comments,
@@ -67,9 +66,10 @@ router.get('/dashboard', withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
-    console.log('user >>>', user);
+
     res.render('dashboard', {
       ...user,
+      isInDashboard: true,
       logged_in: true
     });
   } catch (err) {

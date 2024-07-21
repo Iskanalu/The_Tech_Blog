@@ -5,6 +5,19 @@ header, .project:not(:last-child) {
 header a {
   color: #d0e1d0;
 }
+.main-title {
+    display: inline-block;
+    background-color: lightpink;
+    padding: 5px;
+    border-radius: 8px;
+    border-right: 5px solid grey;
+    border-bottom: 5px solid grey;
+    margin-top: 10px;
+}
+
+nav a {
+  margin-left: 20px;
+}
 
 .header-post {
   background-color: black;
