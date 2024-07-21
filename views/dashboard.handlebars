@@ -50,7 +50,7 @@
     {{#each posts as |post|}}
     <div class="row mb-2">
       <div class="col-md-6">
-        <h4><a class="btn btn-link" data-bs-toggle="modal" data-bs-target="#editModal"  href="/post/{{post.id}}">{{post.title}} {{format_date date_created}}</a></h4>
+        <a class="btn btn-link edit-post-open" data-bs-toggle="modal" data-bs-target="#editModal" id="{{post.id}}">{{post.title}} {{format_date date_created}}</a>
       </div>
     </div>
     {{/each}}
@@ -65,16 +65,16 @@
       <div class="modal-body">
         <form class="form new-post-form">
           <div class="form-group">
-            <label for="post-title">Title</label>
-            <input class="form-input" type="text" id="post-title" />
+            <label for="edit-post-title">Title</label>
+            <input class="form-input" type="text" id="edit-post-title" />
           </div>
           <div class="form-group">
-            <label for="post-content">Content</label>
-            <textarea class="form-input" id="post-content" title="post-content"></textarea>
+            <label for="edit-post-content">Content</label>
+            <textarea class="form-input" id="edit-post-content" title="post-content"></textarea>
           </div>
           <div class="form-group">
-            <button class="btn btn-primary w-100" type="submit">Update Post</button>
-            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#editModal" data-id="{{post.id}}">Delete</button>
+            <button class="btn btn-primary w-100" id="update-post" type="submit">Update Post</button>
+            <button class="btn btn-primary w-100" id="delete-post" data-bs-toggle="modal" data-bs-target="#editModal">Delete</button>
           </div>
         </form>
       </div>

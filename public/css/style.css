@@ -6,6 +6,19 @@ header a {
   color: #d0e1d0;
 }
 
+.header-post {
+  background-color: black;
+  color: white;
+  padding: 5px 15px;
+  margin-top: 10px;
+}
+
+.content-post {
+  border: 2px solid black;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
 .background-body {
   background-color: lightpink;
 }
